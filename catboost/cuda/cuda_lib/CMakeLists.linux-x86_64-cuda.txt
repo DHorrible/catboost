@@ -127,9 +127,6 @@ target_sources(catboost-cuda-cuda_lib.global PRIVATE
 )
 
 if (USE_MPI)
-  set(MPI_ASSUME_NO_BUILTIN_MPI 1)
-  set(MPI_SKIP_COMPILER_WRAPPER 1)
-
   find_package(MPI REQUIRED)
 
   target_compile_definitions(catboost-cuda-cuda_lib PUBLIC USE_MPI)
